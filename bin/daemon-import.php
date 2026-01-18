@@ -35,7 +35,7 @@ use App\Print\StampaManager;
 
 define('LOOP_INTERVAL', 60);
 define('MAX_RECORDS_PER_ITERATION', 10000);  // Increased to catch all STAMPA markers  // Increased to include STAMPA markers
-define('LOCK_FILE', '/tmp/daemon-import.lock');
+define('LOCK_FILE', '/var/www/DB_INV/logs/daemon-import.lock');
 define('MAX_RUNTIME', 3600);
 
 $iteration = 0;

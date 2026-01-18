@@ -67,3 +67,33 @@
 [2026-01-18 23:00:50] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
 [2026-01-18 23:00:50] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
 [2026-01-18 23:00:50] [INFO] Iter 3: imported=35 skipped=9965 markers=2
+[2026-01-18 23:01:51] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:01:51] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:01:51] [INFO] Iter 4: imported=35 skipped=9965 markers=2
+[2026-01-18 23:02:53] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:02:53] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:02:53] [INFO] Iter 5: imported=35 skipped=9965 markers=2
+[2026-01-18 23:02:56] [INFO] === DAEMON STARTED ===
+[2026-01-18 23:02:56] [INFO] DB2 connection established via ODBC DSN: DB2
+[2026-01-18 23:02:56] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 23:02:56] [INFO] Connessione DB2 stabilita
+[2026-01-18 23:02:56] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 23:02:56] [INFO] Loaded 1 operator configs
+[2026-01-18 23:02:58] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:02:58] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:02:58] [INFO] Iter 1: imported=35 skipped=9965 markers=2
+[2026-01-18 23:04:00] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:04:00] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:04:00] [INFO] Iter 2: imported=35 skipped=9965 markers=2
+[2026-01-18 23:05:02] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:05:02] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:05:02] [INFO] Iter 3: imported=35 skipped=9965 markers=2
+[2026-01-18 23:06:04] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:06:04] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:06:04] [INFO] Iter 4: imported=35 skipped=9965 markers=2
+[2026-01-18 23:07:06] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:07:06] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:07:06] [INFO] Iter 5: imported=35 skipped=9965 markers=2
+[2026-01-18 23:08:08] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:08:08] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:08:08] [INFO] Iter 6: imported=35 skipped=9965 markers=2
