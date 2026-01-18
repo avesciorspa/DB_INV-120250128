@@ -2,15 +2,12 @@
 
 namespace App\Database;
 
-use App\Config;
-use App\Logger;
-
 class DB2Connection
 {
     private \PDO $pdo;
-    private Logger $logger;
+    private \App\Logger $logger;
 
-    public function __construct(Logger $logger)
+    public function __construct(\App\Logger $logger)
     {
         $this->logger = $logger;
         $this->connect();
@@ -19,15 +16,21 @@ class DB2Connection
     private function connect(): void
     {
         try {
-            $dsn = "odbc:" . \App\Config::get("DB2_DSN");
-            $user = \App\Config::get("DB2_USER");
-            $pass = \App\Config::get("DB2_PASS");
+            $dsn = \App\Config::get('DB2_DSN');  // Should be "DB2"
+            $user = \App\Config::get('DB2_USER');
+            $pass = \App\Config::get('DB2_PASS');
+            $host = \App\Config::get('DB2_HOST', required: false);
+            $port = \App\Config::get('DB2_PORT', '50000', required: false);
 
-            $this->pdo = new \PDO($dsn, $user, $pass);
-
-            $this->logger->info("Connessione DB2 stabilita");
+            // Per IBM DB2 via ODBC - usa DSN configurato nel sistema
+            $fullDsn = "odbc:$dsn";
+            
+            $this->pdo = new \PDO($fullDsn, $user, $pass);
+            $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            
+            $this->logger->info("DB2 connection established via ODBC DSN: $dsn");
         } catch (\PDOException $e) {
-            $this->logger->critical("DB2 connection error: " . $e->getMessage());
+            $this->logger->error("DB2 connection failed: " . $e->getMessage());
             throw $e;
         }
     }
@@ -35,16 +38,6 @@ class DB2Connection
     public function getPDO(): \PDO
     {
         return $this->pdo;
-    }
-
-    public function query(string $sql)
-    {
-        return $this->pdo->query($sql);
-    }
-
-    public function prepare(string $sql)
-    {
-        return $this->pdo->prepare($sql);
     }
 
     public function close(): void

@@ -2,16 +2,6 @@
 
 namespace App\Import;
 
-use App\Config;
-use App\Logger;
-use App\Database\DB2Connection;
-use App\Database\MySQLConnection;
-use App\Repository\ConfigOperatoreRepository;
-use App\Repository\MarkerRepository;
-use App\Repository\ConteggiRepository;
-use App\Repository\StampantiRepository;
-use App\Print\PrinterManager;
-
 /**
  * Gestione del lock file per evitare esecuzioni parallele
  */
@@ -194,6 +184,40 @@ class MarkerProcessor
                 'tipo' => $tipo,
                 'printer' => $printer['CODA_CUPS'],
             ]);
+        }
+    }
+}
+
+
+/**
+ * Main Importer class - wrapper for daemon use
+ */
+class Importer
+{
+    private \App\Database\MySQLConnection $mysql;
+    private \App\Database\DB2Connection $db2;
+    private \App\Logger $logger;
+
+    public function __construct(\App\Database\MySQLConnection $mysql, \App\Database\DB2Connection $db2, \App\Logger $logger)
+    {
+        $this->mysql = $mysql;
+        $this->db2 = $db2;
+        $this->logger = $logger;
+    }
+
+    /**
+     * Process a record (marker or inventory)
+     */
+    public function process(string $operatore, int $reparto, int $numInv, ?int $area = null): void
+    {
+        // This is a placeholder that gets called by daemon for ZZZ/AREA markers
+        // The actual processing is handled by MarkerProcessor
+        if ($area !== null) {
+            // Update CONF_OPERATORE area
+            $sql = "UPDATE CONF_OPERATORE SET ID_AREA = ? WHERE CODICE = ? AND ID_REP = ? AND ID_INVENTARIO = ?";
+            $stmt = $this->mysql->getPDO()->prepare($sql);
+            $stmt->execute([$area, $operatore, $reparto, $numInv]);
+            $this->logger->debug("Updated operator $operatore area to $area");
         }
     }
 }
