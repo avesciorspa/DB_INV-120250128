@@ -34,7 +34,7 @@ use App\Import\Importer;
 use App\Print\StampaManager;
 
 define('LOOP_INTERVAL', 60);
-define('MAX_RECORDS_PER_ITERATION', 1000);
+define('MAX_RECORDS_PER_ITERATION', 10000);  // Increased to catch all STAMPA markers  // Increased to include STAMPA markers
 define('LOCK_FILE', '/tmp/daemon-import.lock');
 define('MAX_RUNTIME', 3600);
 
@@ -128,11 +128,14 @@ try {
                 
                 if ($precodice === 'ZZZ') {
                     $markerType = trim($row['CODICE_ART'] ?? '');  // Marker type is in CODICE_ART
-                    $logger->info("DEBUG Marker detected: PRECODICE=ZZZ, CODICE_ART=[" . $markerType . "]");
-                    $logger->info("DEBUG: markerType length=" . strlen($markerType) . ", ord(0)=" . ord($markerType[0] ?? '') . ", ord(-1)=" . ord(substr($markerType, -1) ?? ''));
+                    
+                    // DEBUG: Log exact markerType value for diagnosis
+                    $logger->info("MARKER_DEBUG: raw=[{$row['CODICE_ART']}] len=" . strlen($row['CODICE_ART']) . 
+                                  " trim=[$markerType] len=" . strlen($markerType) . 
+                                  " is_AREA=" . ($markerType === 'AREA' ? 'Y' : 'N') .
+                                  " is_STAMPA=" . ($markerType === 'STAMPA' ? 'Y' : 'N'));
                     
                     if ($markerType === 'AREA') {
-                        $logger->info("DEBUG: Entering AREA marker branch");
                         // ZZZ/AREA marker: update operator area
                         // For ZZZ markers, the value (area/tipo) is in QTA_CONTEGGIATA
                         $operatore = $row['OPER_CREAZ'];
@@ -141,16 +144,13 @@ try {
                         $area = (int)($row['QTA_CONTEGGIATA'] ?? -1);
                         
                         try {
-                            $logger->info("DEBUG: About to call importer->process with area=$area");
                             $importer->process($operatore, $reparto, $numInv, $area);
-                            $logger->info("DEBUG: Marker AREA: Updated area=$area for operatore=$operatore");
                             $markerCount++;
                         } catch (\Exception $e) {
                             $logger->error("Marker AREA failed: " . $e->getMessage());
                         }
                         
                     } elseif ($markerType === 'STAMPA') {
-                        $logger->info("DEBUG: Entering STAMPA marker branch");
                         // ZZZ/STAMPA marker: generate print file
                         $operatore = $row['OPER_CREAZ'];
                         $reparto = $row['REPARTO'];
@@ -166,7 +166,7 @@ try {
                             
                             if (!$tipoRow) {
                                 $logger->error("Marker STAMPA: Invalid CODICE=$codiceTipo");
-                                continue;
+                                // continue; // Ora inseriamo il marker anche se fallisce
                             }
                             
                             $idTipo = $tipoRow['ID_TIPO'];
@@ -175,7 +175,7 @@ try {
                             $areaCorrente = $stampaManager->getAreaCorrente($operatore, $reparto, $numInv);
                             if ($areaCorrente === -1) {
                                 $logger->error("Marker STAMPA: Could not get current area for $operatore");
-                                continue;
+                                // continue; // Ora inseriamo il marker anche se fallisce
                             }
                             
                             // Select rows based on type
@@ -184,7 +184,7 @@ try {
                             if (count($righe) === 0) {
                                 $logger->debug("Marker STAMPA: No rows found for $codiceTipo");
                                 $markerCount++;
-                                continue;
+                                // continue; // Ora inseriamo il marker anche se no rows
                             }
                             
                             // Generate TXT file
@@ -199,6 +199,59 @@ try {
                         } catch (\Exception $e) {
                             $logger->error("Marker STAMPA failed: " . $e->getMessage());
                         }
+                    }
+                    
+                    // IMPORTANTE: Inserisci il marker in CONTEGGI (business logic requirement)
+
+                    // IMPORTANTE: Inserisci il marker in CONTEGGI (business logic requirement)
+                    // I marker ZZZ devono essere inseriti come record normali DOPO il processing
+                    try {
+                        // Format time from HHMM to HH:MM:SS
+                        $timeStr = (string)($row["ORA_CREAZ"] ?? date("Hi"));
+                        if (strlen($timeStr) == 4) {
+                            $timeStr = substr($timeStr, 0, 2) . ':' . substr($timeStr, 2, 2) . ':00';
+                        }
+                        
+                        // Build timestamp from DATA_CREAZ and ORA_CREAZ
+                        $dataStr = $row['DATA_CREAZ'] ?? date('Y-m-d');
+                        $oraStr = (string)($row['ORA_CREAZ'] ?? date("Hi"));
+                        if (strlen($oraStr) == 4) {
+                            $oraStr = substr($oraStr, 0, 2) . ':' . substr($oraStr, 2, 2) . ':00';
+                        } else {
+                            $oraStr = '00:00:00';
+                        }
+                        $tsCreazione = $dataStr . ' ' . $oraStr;
+                        
+                        $sqlMarkerInsert = "INSERT INTO CONTEGGI 
+                                           (REPARTO, NUMERO_INV, PRECODICE, CODICE_ART, POSIZIONE, 
+                                            NUMERO_CONTA, PROG, QTA_CONTEGGIATA, OPER_CREAZ, TS_CREAZIONE, 
+                                            CODICE_OPERATORE, ID_AREA, STAMPATO)
+                                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                           ON DUPLICATE KEY UPDATE
+                                           QTA_CONTEGGIATA = VALUES(QTA_CONTEGGIATA),
+                                           TS_CREAZIONE = VALUES(TS_CREAZIONE)";
+                        
+                        $stmtMarkerInsert = $mysql->getPDO()->prepare($sqlMarkerInsert);
+                        $stmtMarkerInsert->execute([
+                            $row['REPARTO'],
+                            $row['NUMERO'],
+                            $row['PRECODICE'],
+                            $row['CODICE_ART'],
+                            $row['POSIZIONE'] ?? null,
+                            $row['NUMERO_CONTA'] ?? 0,
+                            $row['PROG'] ?? 0,
+                            $row['QTA_CONTEGGIATA'] ?? 0,
+                            trim($row['OPER_CREAZ']),
+                            $tsCreazione,
+                            trim($row['OPER_CREAZ']),
+                            -1,
+                            0
+                        ]);
+                        
+                        $imported++; // Count marker as imported
+                        
+                    } catch (\Exception $e) {
+                        $logger->error("Marker CONTEGGI insertion error: " . $e->getMessage());
                     }
                     
                 } else {

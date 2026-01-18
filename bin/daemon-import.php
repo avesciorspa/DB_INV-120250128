@@ -34,7 +34,7 @@ use App\Import\Importer;
 use App\Print\StampaManager;
 
 define('LOOP_INTERVAL', 60);
-define('MAX_RECORDS_PER_ITERATION', 1000);
+define('MAX_RECORDS_PER_ITERATION', 10000);  // Increased to catch all STAMPA markers  // Increased to include STAMPA markers
 define('LOCK_FILE', '/tmp/daemon-import.lock');
 define('MAX_RUNTIME', 3600);
 
@@ -129,6 +129,12 @@ try {
                 if ($precodice === 'ZZZ') {
                     $markerType = trim($row['CODICE_ART'] ?? '');  // Marker type is in CODICE_ART
                     
+                    // DEBUG: Log exact markerType value for diagnosis
+                    $logger->info("MARKER_DEBUG: raw=[{$row['CODICE_ART']}] len=" . strlen($row['CODICE_ART']) . 
+                                  " trim=[$markerType] len=" . strlen($markerType) . 
+                                  " is_AREA=" . ($markerType === 'AREA' ? 'Y' : 'N') .
+                                  " is_STAMPA=" . ($markerType === 'STAMPA' ? 'Y' : 'N'));
+                    
                     if ($markerType === 'AREA') {
                         // ZZZ/AREA marker: update operator area
                         // For ZZZ markers, the value (area/tipo) is in QTA_CONTEGGIATA
@@ -159,11 +165,10 @@ try {
                             $tipoRow = $stmtValidate->fetch(\PDO::FETCH_ASSOC);
                             
                             if (!$tipoRow) {
-                                $logger->error("Marker STAMPA: Invalid CODICE=$codiceTipo");
-                                // continue; // Ora inseriamo il marker anche se fallisce
-                            }
-                            
-                            $idTipo = $tipoRow['ID_TIPO'];
+                                $logger->warning("Marker STAMPA: Invalid CODICE=$codiceTipo - skipping print generation");
+                                $markerCount++; // Insert marker even if print fails
+                            } else {
+                                $idTipo = $tipoRow['ID_TIPO'];
                             
                             // Get operator's current area
                             $areaCorrente = $stampaManager->getAreaCorrente($operatore, $reparto, $numInv);
@@ -189,6 +194,7 @@ try {
                                 $markerCount++;
                             } else {
                                 $logger->error("Marker STAMPA: Failed to generate file");
+                            }
                             }
                         } catch (\Exception $e) {
                             $logger->error("Marker STAMPA failed: " . $e->getMessage());
