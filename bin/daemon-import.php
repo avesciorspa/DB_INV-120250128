@@ -35,7 +35,7 @@ use App\Print\StampaManager;
 
 define('LOOP_INTERVAL', 60);
 define('MAX_RECORDS_PER_ITERATION', 1000);
-define('LOCK_FILE', '/.lock/daemon-import.lock');
+define('LOCK_FILE', '/tmp/daemon-import.lock');
 define('MAX_RUNTIME', 3600);
 
 $iteration = 0;
@@ -98,8 +98,7 @@ try {
         try {
             // Fetch records from DB2 D01.INVC
             $queryD01 = "
-                SELECT ID, REPARTO, NUMERO_INVENTARIO, PRE_CODICE, CODICE_ART, QTA_CONTEGGIO, 
-                       MARKER, OPER_CREAZ, DATA_CREAZ, AREA, STAMPATO
+                SELECT REPARTO, NUMERO, PRECODICE, CODICE_ART, POSIZIONE, NUMERO_CONTA, PROG, QTA_CONTEGGIATA, RIFERIMENTI, OPER_CREAZ, UTEN_CREAZ, DATA_CREAZ, ORA_CREAZ, OPER_MODIF, UTEN_MODIF, DATA_MODIF, ORA_MODIF
                 FROM D01.INVC
                 LIMIT " . MAX_RECORDS_PER_ITERATION . "
             ";
@@ -110,7 +109,7 @@ try {
             
             while ($row = $stmtD01->fetch(\PDO::FETCH_ASSOC)) {
                 // Trim whitespace from key fields (DB2 may pad with spaces)
-                $row['PRE_CODICE'] = trim($row['PRE_CODICE'] ?? '');
+                $row['PRECODICE'] = trim($row['PRECODICE'] ?? '');
                 $row['CODICE_ART'] = trim($row['CODICE_ART'] ?? '');
                 $row['OPER_CREAZ'] = trim($row['OPER_CREAZ'] ?? '');
                 $records[] = $row;
@@ -124,22 +123,22 @@ try {
             $markerCount = 0;
             
             foreach ($records as $row) {
-                // Check for markers first
-                $marker = trim($row['MARKER'] ?? '');
+                // Check for markers first - ZZZ markers are identified by PRECODICE = 'ZZZ'
+                $precodice = trim($row['PRECODICE'] ?? '');
                 
-                if ($marker === 'ZZZ') {
-                    $markerType = trim($row['PRE_CODICE'] ?? '');
+                if ($precodice === 'ZZZ') {
+                    $markerType = trim($row['CODICE_ART'] ?? '');  // Marker type is in CODICE_ART
                     
                     if ($markerType === 'AREA') {
                         // ZZZ/AREA marker: update operator area
+                        // For ZZZ markers, the value (area/tipo) is in QTA_CONTEGGIATA
                         $operatore = $row['OPER_CREAZ'];
                         $reparto = $row['REPARTO'];
-                        $numInv = $row['NUMERO_INVENTARIO'];
-                        $area = $row['AREA'];
+                        $numInv = $row['NUMERO'];
+                        $area = (int)($row['QTA_CONTEGGIATA'] ?? -1);
                         
                         try {
                             $importer->process($operatore, $reparto, $numInv, $area);
-                            $logger->debug("Marker AREA: Updated area=$area for operatore=$operatore");
                             $markerCount++;
                         } catch (\Exception $e) {
                             $logger->error("Marker AREA failed: " . $e->getMessage());
@@ -149,7 +148,7 @@ try {
                         // ZZZ/STAMPA marker: generate print file
                         $operatore = $row['OPER_CREAZ'];
                         $reparto = $row['REPARTO'];
-                        $numInv = $row['NUMERO_INVENTARIO'];
+                        $numInv = $row['NUMERO'];
                         $codiceTipo = trim($row['CODICE_ART'] ?? '');
                         
                         try {
@@ -196,16 +195,107 @@ try {
                         }
                     }
                     
+                    // IMPORTANTE: Inserisci il marker in CONTEGGI (business logic requirement)
+
+                    // IMPORTANTE: Inserisci il marker in CONTEGGI (business logic requirement)
+                    // I marker ZZZ devono essere inseriti come record normali DOPO il processing
+                    try {
+                        // Format time from HHMM to HH:MM:SS
+                        $timeStr = (string)($row["ORA_CREAZ"] ?? date("Hi"));
+                        if (strlen($timeStr) == 4) {
+                            $timeStr = substr($timeStr, 0, 2) . ':' . substr($timeStr, 2, 2) . ':00';
+                        }
+                        
+                        // Build timestamp from DATA_CREAZ and ORA_CREAZ
+                        $dataStr = $row['DATA_CREAZ'] ?? date('Y-m-d');
+                        $oraStr = (string)($row['ORA_CREAZ'] ?? date("Hi"));
+                        if (strlen($oraStr) == 4) {
+                            $oraStr = substr($oraStr, 0, 2) . ':' . substr($oraStr, 2, 2) . ':00';
+                        } else {
+                            $oraStr = '00:00:00';
+                        }
+                        $tsCreazione = $dataStr . ' ' . $oraStr;
+                        
+                        $sqlMarkerInsert = "INSERT INTO CONTEGGI 
+                                           (REPARTO, NUMERO_INV, PRECODICE, CODICE_ART, POSIZIONE, 
+                                            NUMERO_CONTA, PROG, QTA_CONTEGGIATA, OPER_CREAZ, TS_CREAZIONE, 
+                                            CODICE_OPERATORE, ID_AREA, STAMPATO)
+                                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                           ON DUPLICATE KEY UPDATE
+                                           QTA_CONTEGGIATA = VALUES(QTA_CONTEGGIATA),
+                                           TS_CREAZIONE = VALUES(TS_CREAZIONE)";
+                        
+                        $stmtMarkerInsert = $mysql->getPDO()->prepare($sqlMarkerInsert);
+                        $stmtMarkerInsert->execute([
+                            $row['REPARTO'],
+                            $row['NUMERO'],
+                            $row['PRECODICE'],
+                            $row['CODICE_ART'],
+                            $row['POSIZIONE'] ?? null,
+                            $row['NUMERO_CONTA'] ?? 0,
+                            $row['PROG'] ?? 0,
+                            $row['QTA_CONTEGGIATA'] ?? 0,
+                            trim($row['OPER_CREAZ']),
+                            $tsCreazione,
+                            trim($row['OPER_CREAZ']),
+                            -1,
+                            0
+                        ]);
+                        
+                        $imported++; // Count marker as imported
+                        
+                    } catch (\Exception $e) {
+                        $logger->error("Marker CONTEGGI insertion error: " . $e->getMessage());
+                    }
+                    
                 } else {
                     // Regular inventory record
                     $operatore = $row['OPER_CREAZ'];
                     $reparto = $row['REPARTO'];
-                    $numInv = $row['NUMERO_INVENTARIO'];
+                    $numInv = $row['NUMERO'];
                     
                     $key = "$reparto:$numInv:$operatore";
                     
                     if (isset($operatoriMap[$key])) {
                         try {
+                            // Insert record into CONTEGGI table
+                            $sqlInsert = "INSERT INTO CONTEGGI 
+                                         (REPARTO, NUMERO_INV, PRECODICE, CODICE_ART, POSIZIONE, 
+                                          NUMERO_CONTA, PROG, QTA_CONTEGGIATA, OPER_CREAZ, TS_CREAZIONE, 
+                                          CODICE_OPERATORE, ID_AREA, STAMPATO)
+                                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                         ON DUPLICATE KEY UPDATE
+                                         QTA_CONTEGGIATA = VALUES(QTA_CONTEGGIATA),
+                                         TS_CREAZIONE = VALUES(TS_CREAZIONE)";
+                            
+                            $stmtInsert = $mysql->getPDO()->prepare($sqlInsert);
+                            
+                            // Format timestamp from DB2
+                            $dataStr = $row['DATA_CREAZ'] ?? date('Y-m-d');
+                            $oraStr = (string)($row["ORA_CREAZ"] ?? date("Hi"));
+                            if (strlen($oraStr) == 4) {
+                                $oraStr = substr($oraStr, 0, 2) . ':' . substr($oraStr, 2, 2) . ':00';
+                            } else {
+                                $oraStr = '00:00:00';
+                            }
+                            $timestamp = $dataStr . ' ' . $oraStr;
+                            
+                            $stmtInsert->execute([
+                                $row['REPARTO'],
+                                $row['NUMERO'],
+                                $row['PRECODICE'],
+                                $row['CODICE_ART'] ?? '',
+                                $row['POSIZIONE'] ?? '',
+                                $row['NUMERO_CONTA'] ?? 0,
+                                $row['PROG'] ?? 0,
+                                $row['QTA_CONTEGGIATA'] ?? 0,
+                                $operatore,
+                                $timestamp,
+                                $operatore,
+                                -1,
+                                0
+                            ]);
+                            
                             $importer->process($operatore, $reparto, $numInv, null);
                             $imported++;
                         } catch (\Exception $e) {
