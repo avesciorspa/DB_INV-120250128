@@ -160,7 +160,7 @@ try {
                             
                             if (!$tipoRow) {
                                 $logger->error("Marker STAMPA: Invalid CODICE=$codiceTipo");
-                                continue;
+                                // continue; // Ora inseriamo il marker anche se fallisce
                             }
                             
                             $idTipo = $tipoRow['ID_TIPO'];
@@ -169,7 +169,7 @@ try {
                             $areaCorrente = $stampaManager->getAreaCorrente($operatore, $reparto, $numInv);
                             if ($areaCorrente === -1) {
                                 $logger->error("Marker STAMPA: Could not get current area for $operatore");
-                                continue;
+                                // continue; // Ora inseriamo il marker anche se fallisce
                             }
                             
                             // Select rows based on type
@@ -178,7 +178,7 @@ try {
                             if (count($righe) === 0) {
                                 $logger->debug("Marker STAMPA: No rows found for $codiceTipo");
                                 $markerCount++;
-                                continue;
+                                // continue; // Ora inseriamo il marker anche se no rows
                             }
                             
                             // Generate TXT file
