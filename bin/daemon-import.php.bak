@@ -1,0 +1,140 @@
+#!/usr/bin/env php
+<?php
+
+// Inline autoloader for daemon (minimal, no dependency on system files)
+spl_autoload_register(function ($class) {
+    $prefix = 'App\\';
+    $base_dir = '/var/www/DB_INV/src/';
+    
+    if (strpos($class, $prefix) === 0) {
+        $relative_class = substr($class, strlen($prefix));
+        $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+        if (file_exists($file)) {
+            require $file;
+        }
+    }
+});
+
+// Import namespaces
+use App\Config;
+use App\Database\DB2Connection;
+use App\Database\MySQLConnection;
+use App\Repository\ConteggiRepository;
+
+const LOOP_INTERVAL = 60;
+const MAX_RUNTIME = 3600;
+
+$startTime = time();
+$iteration = 0;
+
+try {
+    // STEP 1: Load configuration
+    $envFile = '/var/www/DB_INV/.env';
+    if (!file_exists($envFile)) {
+        throw new \Exception("Config file not found: $envFile");
+    }
+    Config::load($envFile);
+    
+    // STEP 2: Get logger path (with fallback)
+    $logFile = Config::get("LOG_FILE", '/tmp/inv_import.log', false);
+    $logger = new \App\Logger($logFile);
+    $logger->info("DAEMON AVVIATO");
+    
+    // STEP 3: Connect to databases
+    $db2 = new DB2Connection($logger);
+    $logger->info("Connessione DB2 stabilita");
+    
+    $mysql = new MySQLConnection($logger);
+    $logger->info("Connessione MySQL stabilita");
+    
+    // STEP 4: Initialize repository
+    $conteggiRepo = new ConteggiRepository($mysql);
+    
+    // STEP 5: Initialize lock manager
+    $lockFile = Config::get("LOCK_FILE", '/tmp/inv_import.lock', false);
+    $lockManager = new \App\Import\LockManager($lockFile, 300);
+    
+    // STEP 6: Main loop
+    while (true) {
+        $iteration++;
+        $elapsed = time() - $startTime;
+        
+        // Check timeout
+        if ($elapsed > MAX_RUNTIME) {
+            $logger->info("Timeout raggiunto");
+            break;
+        }
+        
+        try {
+            // Try to acquire lock
+            if (!$lockManager->acquire()) {
+                sleep(LOOP_INTERVAL);
+                continue;
+            }
+            
+            // Query D01.INVC with CORRECT column names
+            try {
+                $query = "SELECT REPARTO, NUMERO, PRECODICE, CODICE_ART, POSIZIONE, NUMERO_CONTA, PROG, QTA_CONTEGGIATA, RIFERIMENTI, OPER_CREAZ, UTEN_CREAZ, DATA_CREAZ, ORA_CREAZ, OPER_MODIF, UTEN_MODIF, DATA_MODIF, ORA_MODIF FROM D01.INVC LIMIT 1000";
+                
+                $stmt = $db2->query($query);
+                $records = [];
+                while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+                    $records[] = $row;
+                }
+            } catch (\Exception $e) {
+                $logger->error("DB2 query error: " . $e->getMessage());
+                $lockManager->release();
+                sleep(LOOP_INTERVAL);
+                continue;
+            }
+            
+            // Check if we got records
+            if (count($records) === 0) {
+                $logger->info("Iter $iteration: no records found");
+                $lockManager->release();
+                sleep(LOOP_INTERVAL);
+                continue;
+            }
+            
+            // Process records
+            $conteggiCount = 0;
+            foreach ($records as $row) {
+                try {
+                    $conteggiRepo->upsertFromINVC([
+                        "reparto" => $row["REPARTO"] ?? null,
+                        "numero_inv" => $row["NUMERO"] ?? null,
+                        "precodice" => $row["PRECODICE"] ?? null,
+                        "codice_art" => $row["CODICE_ART"] ?? null,
+                        "posizione" => $row["POSIZIONE"] ?? "",
+                        "numero_conta" => $row["NUMERO_CONTA"] ?? 0,
+                        "prog" => $row["PROG"] ?? 0,
+                        "qty" => $row["QTA_CONTEGGIATA"] ?? 0,
+                        "oper_creaz" => $row["OPER_CREAZ"] ?? null,
+                        "ts_creazione" => ($row["DATA_CREAZ"] ?? date("Y-m-d")) . " " . ($row["ORA_CREAZ"] ?? date("H:i:s")),
+                        "id_area" => -1,
+                    ]);
+                    $conteggiCount++;
+                } catch (\Exception $e) {
+                    $logger->error("Record upsert error: " . $e->getMessage());
+                }
+            }
+            
+            $logger->info("Iter $iteration: imported $conteggiCount records");
+            $lockManager->release();
+            
+        } catch (\Exception $e) {
+            $logger->error("Iteration error: " . $e->getMessage());
+            try {
+                $lockManager->release();
+            } catch (\Exception $ignored) {}
+        }
+        
+        sleep(LOOP_INTERVAL);
+    }
+
+} catch (\Exception $e) {
+    error_log("DAEMON FATAL: " . $e->getMessage());
+    exit(1);
+}
+
+exit(0);

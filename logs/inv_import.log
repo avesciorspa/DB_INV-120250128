@@ -1,0 +1,632 @@
+[2026-01-18 12:53:35] [INFO] DAEMON AVVIATO
+[2026-01-18 12:53:35] [INFO] Connessione DB2 stabilita
+[2026-01-18 12:53:35] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 12:53:35] [INFO] Connessione DB2 stabilita
+[2026-01-18 12:53:35] [INFO] Connessione MySQL stabilita
+[2026-01-18 12:53:35] [INFO] Loaded 1 operator configurations
+[2026-01-18 12:53:36] [INFO] Iter 1: imported 0 records, skipped 1000 (no operator match)
+[2026-01-18 13:00:03] [INFO] DAEMON AVVIATO
+[2026-01-18 13:00:03] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:00:03] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:00:03] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:00:03] [INFO] Connessione MySQL stabilita
+[2026-01-18 13:00:03] [INFO] Loaded 1 operator configurations
+[2026-01-18 13:01:18] [INFO] DAEMON AVVIATO
+[2026-01-18 13:01:18] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:01:18] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:01:18] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:01:18] [INFO] Connessione MySQL stabilita
+[2026-01-18 13:01:18] [INFO] Loaded 1 operator configurations
+[2026-01-18 13:01:33] [INFO] DAEMON AVVIATO
+[2026-01-18 13:01:33] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:01:33] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:01:33] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:01:33] [INFO] Connessione MySQL stabilita
+[2026-01-18 13:01:33] [INFO] Loaded 1 operator configurations
+[2026-01-18 13:02:07] [INFO] DAEMON AVVIATO
+[2026-01-18 13:02:07] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:02:07] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:02:07] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:02:07] [INFO] Connessione MySQL stabilita
+[2026-01-18 13:02:07] [INFO] Loaded 1 operator configurations
+[2026-01-18 13:03:25] [INFO] DAEMON AVVIATO
+[2026-01-18 13:03:25] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:03:25] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:03:25] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:03:25] [INFO] Connessione MySQL stabilita
+[2026-01-18 13:03:25] [INFO] Loaded 1 operator configurations
+[2026-01-18 13:03:26] [INFO] Iter 1: imported 35 records, skipped 965
+[2026-01-18 13:04:26] [INFO] Iter 2: imported 35 records, skipped 965
+[2026-01-18 13:04:45] [INFO] DAEMON AVVIATO
+[2026-01-18 13:04:45] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:04:45] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:04:45] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:04:45] [INFO] Connessione MySQL stabilita
+[2026-01-18 13:04:45] [INFO] Loaded 1 operator configurations
+[2026-01-18 13:04:45] [ERROR] Cannot open lock file: /tmp/daemon-import-lock
+[2026-01-18 13:05:45] [ERROR] Cannot open lock file: /tmp/daemon-import-lock
+[2026-01-18 13:06:55] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:06:55] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:06:55] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:06:55] [INFO] Loaded 1 operator configs
+[2026-01-18 13:07:56] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:07:56] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:07:56] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:07:56] [INFO] Loaded 1 operator configs
+[2026-01-18 13:07:56] [INFO] Iter 1: imported=35 skipped=965
+[2026-01-18 13:08:56] [INFO] Iter 2: imported=35 skipped=965
+[2026-01-18 13:09:12] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:09:13] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:09:13] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:09:13] [INFO] Loaded 1 operator configs
+[2026-01-18 13:09:13] [INFO] Iter 1: imported=35 skipped=965
+[2026-01-18 13:10:13] [INFO] Iter 2: imported=35 skipped=965
+[2026-01-18 13:11:14] [INFO] Iter 3: imported=35 skipped=965
+[2026-01-18 13:12:14] [INFO] Iter 4: imported=35 skipped=965
+[2026-01-18 13:13:14] [INFO] Iter 5: imported=35 skipped=965
+[2026-01-18 13:14:15] [INFO] Iter 6: imported=35 skipped=965
+[2026-01-18 13:15:15] [INFO] Iter 7: imported=35 skipped=965
+[2026-01-18 13:15:50] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:15:50] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:15:50] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:15:50] [INFO] Loaded 1 operator configs
+[2026-01-18 13:15:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:15:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:15:50] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 13:16:15] [INFO] Iter 8: imported=35 skipped=965
+[2026-01-18 13:16:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:16:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:16:51] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 13:17:10] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:17:10] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:17:10] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:17:10] [INFO] Loaded 1 operator configs
+[2026-01-18 13:17:11] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:17:11] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:17:11] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 13:17:16] [INFO] Iter 9: imported=35 skipped=965
+[2026-01-18 13:17:51] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:17:52] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:17:52] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:17:52] [INFO] Loaded 1 operator configs
+[2026-01-18 13:17:52] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:17:52] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:17:52] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 13:18:11] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:18:11] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:18:11] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 13:18:16] [INFO] Iter 10: imported=35 skipped=965
+[2026-01-18 13:18:52] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:18:52] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:18:52] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 13:19:12] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:19:12] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:19:12] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 13:19:16] [INFO] Iter 11: imported=35 skipped=965
+[2026-01-18 13:19:53] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:19:53] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:19:53] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 13:20:12] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:20:12] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:20:12] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 13:20:17] [INFO] Iter 12: imported=35 skipped=965
+[2026-01-18 13:20:53] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:20:53] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:20:53] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 13:21:12] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:21:12] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:21:12] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 13:21:17] [INFO] Iter 13: imported=35 skipped=965
+[2026-01-18 13:21:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:21:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:21:54] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 13:22:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:22:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:22:13] [INFO] Iter 6: imported=35 skipped=965 markers=2
+[2026-01-18 13:22:17] [INFO] Iter 14: imported=35 skipped=965
+[2026-01-18 13:22:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:22:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:22:54] [INFO] Iter 6: imported=35 skipped=965 markers=2
+[2026-01-18 13:23:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:23:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:23:13] [INFO] Iter 7: imported=35 skipped=965 markers=2
+[2026-01-18 13:23:18] [INFO] Iter 15: imported=35 skipped=965
+[2026-01-18 13:23:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:23:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:23:54] [INFO] Iter 7: imported=35 skipped=965 markers=2
+[2026-01-18 13:24:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:24:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:24:13] [INFO] Iter 8: imported=35 skipped=965 markers=2
+[2026-01-18 13:24:18] [INFO] Iter 16: imported=35 skipped=965
+[2026-01-18 13:24:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:24:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:24:55] [INFO] Iter 8: imported=35 skipped=965 markers=2
+[2026-01-18 13:25:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:25:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:25:13] [INFO] Iter 9: imported=35 skipped=965 markers=2
+[2026-01-18 13:25:18] [INFO] Iter 17: imported=35 skipped=965
+[2026-01-18 13:25:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:25:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:25:55] [INFO] Iter 9: imported=35 skipped=965 markers=2
+[2026-01-18 13:26:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:26:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:26:14] [INFO] Iter 10: imported=35 skipped=965 markers=2
+[2026-01-18 13:26:18] [INFO] Iter 18: imported=35 skipped=965
+[2026-01-18 13:26:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:26:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:26:55] [INFO] Iter 10: imported=35 skipped=965 markers=2
+[2026-01-18 13:27:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:27:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:27:14] [INFO] Iter 11: imported=35 skipped=965 markers=2
+[2026-01-18 13:27:19] [INFO] Iter 19: imported=35 skipped=965
+[2026-01-18 13:27:56] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:27:56] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:27:56] [INFO] Iter 11: imported=35 skipped=965 markers=2
+[2026-01-18 13:28:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:28:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:28:14] [INFO] Iter 12: imported=35 skipped=965 markers=2
+[2026-01-18 13:28:19] [INFO] Iter 20: imported=35 skipped=965
+[2026-01-18 13:28:56] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:28:56] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:28:56] [INFO] Iter 12: imported=35 skipped=965 markers=2
+[2026-01-18 13:29:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:29:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:29:15] [INFO] Iter 13: imported=35 skipped=965 markers=2
+[2026-01-18 13:29:19] [INFO] Iter 21: imported=35 skipped=965
+[2026-01-18 13:29:56] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:29:56] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:29:56] [INFO] Iter 13: imported=35 skipped=965 markers=2
+[2026-01-18 13:30:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:30:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:30:15] [INFO] Iter 14: imported=35 skipped=965 markers=2
+[2026-01-18 13:30:20] [INFO] Iter 22: imported=35 skipped=965
+[2026-01-18 13:30:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:30:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:30:57] [INFO] Iter 14: imported=35 skipped=965 markers=2
+[2026-01-18 13:31:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:31:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:31:15] [INFO] Iter 15: imported=35 skipped=965 markers=2
+[2026-01-18 13:31:20] [INFO] Iter 23: imported=35 skipped=965
+[2026-01-18 13:31:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:31:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:31:57] [INFO] Iter 15: imported=35 skipped=965 markers=2
+[2026-01-18 13:32:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:32:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:32:15] [INFO] Iter 16: imported=35 skipped=965 markers=2
+[2026-01-18 13:32:20] [INFO] Iter 24: imported=35 skipped=965
+[2026-01-18 13:32:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:32:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:32:57] [INFO] Iter 16: imported=35 skipped=965 markers=2
+[2026-01-18 13:33:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:33:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:33:16] [INFO] Iter 17: imported=35 skipped=965 markers=2
+[2026-01-18 13:33:20] [INFO] Iter 25: imported=35 skipped=965
+[2026-01-18 13:33:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:33:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:33:58] [INFO] Iter 17: imported=35 skipped=965 markers=2
+[2026-01-18 13:34:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:34:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:34:16] [INFO] Iter 18: imported=35 skipped=965 markers=2
+[2026-01-18 13:34:21] [INFO] Iter 26: imported=35 skipped=965
+[2026-01-18 13:34:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:34:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:34:58] [INFO] Iter 18: imported=35 skipped=965 markers=2
+[2026-01-18 13:35:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:35:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:35:16] [INFO] Iter 19: imported=35 skipped=965 markers=2
+[2026-01-18 13:35:21] [INFO] Iter 27: imported=35 skipped=965
+[2026-01-18 13:35:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:35:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:35:58] [INFO] Iter 19: imported=35 skipped=965 markers=2
+[2026-01-18 13:36:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:36:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:36:16] [INFO] Iter 20: imported=35 skipped=965 markers=2
+[2026-01-18 13:36:21] [INFO] Iter 28: imported=35 skipped=965
+[2026-01-18 13:36:58] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:36:58] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:36:58] [INFO] ConfigOperatore aggiornata {"id":5}
+[2026-01-18 13:36:58] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:36:58] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:36:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:36:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:36:58] [INFO] Iter 20: imported=35 skipped=965 markers=2
+[2026-01-18 13:37:00] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:00] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:09] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:09] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:09] [INFO] ConfigOperatore aggiornata {"id":5}
+[2026-01-18 13:37:09] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:09] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:13] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:13] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:37:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:37:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:37:17] [INFO] Iter 21: imported=35 skipped=965 markers=2
+[2026-01-18 13:37:22] [INFO] Iter 29: imported=35 skipped=965
+[2026-01-18 13:37:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:37:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:37:59] [INFO] Iter 21: imported=35 skipped=965 markers=2
+[2026-01-18 13:38:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:38:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:38:17] [INFO] Iter 22: imported=35 skipped=965 markers=2
+[2026-01-18 13:38:22] [INFO] Iter 30: imported=35 skipped=965
+[2026-01-18 13:38:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:38:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:38:59] [INFO] Iter 22: imported=35 skipped=965 markers=2
+[2026-01-18 13:39:03] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:39:03] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:39:03] [INFO] ConfigOperatore aggiornata {"id":5}
+[2026-01-18 13:39:03] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:39:03] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:39:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:39:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:39:17] [INFO] Iter 23: imported=35 skipped=965 markers=2
+[2026-01-18 13:39:22] [INFO] Iter 31: imported=35 skipped=965
+[2026-01-18 13:39:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:39:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:39:59] [INFO] Iter 23: imported=35 skipped=965 markers=2
+[2026-01-18 13:40:01] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:40:01] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:40:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:40:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:40:17] [INFO] Iter 24: imported=35 skipped=965 markers=2
+[2026-01-18 13:40:23] [INFO] Iter 32: imported=35 skipped=965
+[2026-01-18 13:41:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:41:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:41:00] [INFO] Iter 24: imported=35 skipped=965 markers=2
+[2026-01-18 13:41:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:41:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:41:18] [INFO] Iter 25: imported=35 skipped=965 markers=2
+[2026-01-18 13:41:23] [INFO] Iter 33: imported=35 skipped=965
+[2026-01-18 13:42:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:42:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:42:00] [INFO] Iter 25: imported=35 skipped=965 markers=2
+[2026-01-18 13:42:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:42:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:42:18] [INFO] Iter 26: imported=35 skipped=965 markers=2
+[2026-01-18 13:42:23] [INFO] Iter 34: imported=35 skipped=965
+[2026-01-18 13:43:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:43:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:43:00] [INFO] Iter 26: imported=35 skipped=965 markers=2
+[2026-01-18 13:43:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:43:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:43:18] [INFO] Iter 27: imported=35 skipped=965 markers=2
+[2026-01-18 13:43:24] [INFO] Iter 35: imported=35 skipped=965
+[2026-01-18 13:44:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:44:00] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:44:00] [INFO] Iter 27: imported=35 skipped=965 markers=2
+[2026-01-18 13:44:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:44:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:44:18] [INFO] Iter 28: imported=35 skipped=965 markers=2
+[2026-01-18 13:44:24] [INFO] Iter 36: imported=35 skipped=965
+[2026-01-18 13:45:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:45:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:45:01] [INFO] Iter 28: imported=35 skipped=965 markers=2
+[2026-01-18 13:45:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:45:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:45:19] [INFO] Iter 29: imported=35 skipped=965 markers=2
+[2026-01-18 13:45:24] [INFO] Iter 37: imported=35 skipped=965
+[2026-01-18 13:46:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:46:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:46:01] [INFO] Iter 29: imported=35 skipped=965 markers=2
+[2026-01-18 13:46:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:46:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:46:19] [INFO] Iter 30: imported=35 skipped=965 markers=2
+[2026-01-18 13:46:25] [INFO] Iter 38: imported=35 skipped=965
+[2026-01-18 13:47:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:47:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:47:01] [INFO] Iter 30: imported=35 skipped=965 markers=2
+[2026-01-18 13:47:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:47:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:47:19] [INFO] Iter 31: imported=35 skipped=965 markers=2
+[2026-01-18 13:47:25] [INFO] Iter 39: imported=35 skipped=965
+[2026-01-18 13:48:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:48:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:48:02] [INFO] Iter 31: imported=35 skipped=965 markers=2
+[2026-01-18 13:48:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:48:19] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:48:19] [INFO] Iter 32: imported=35 skipped=965 markers=2
+[2026-01-18 13:48:25] [INFO] Iter 40: imported=35 skipped=965
+[2026-01-18 13:49:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:49:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:49:02] [INFO] Iter 32: imported=35 skipped=965 markers=2
+[2026-01-18 13:49:20] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:49:20] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:49:20] [INFO] Iter 33: imported=35 skipped=965 markers=2
+[2026-01-18 13:49:25] [INFO] Iter 41: imported=35 skipped=965
+[2026-01-18 13:50:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:50:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:50:02] [INFO] Iter 33: imported=35 skipped=965 markers=2
+[2026-01-18 13:50:20] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:50:20] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:50:20] [INFO] Iter 34: imported=35 skipped=965 markers=2
+[2026-01-18 13:50:26] [INFO] Iter 42: imported=35 skipped=965
+[2026-01-18 13:51:03] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:51:03] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:51:03] [INFO] Iter 34: imported=35 skipped=965 markers=2
+[2026-01-18 13:51:20] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:51:20] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:51:20] [INFO] Iter 35: imported=35 skipped=965 markers=2
+[2026-01-18 13:51:26] [INFO] Iter 43: imported=35 skipped=965
+[2026-01-18 13:51:56] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:51:56] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:51:56] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:51:56] [INFO] Loaded 1 operator configs
+[2026-01-18 13:51:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:51:57] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:51:57] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 13:52:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:52:58] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:52:58] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 13:53:13] [INFO] === DAEMON STARTED ===
+[2026-01-18 13:53:13] [INFO] Connessione DB2 stabilita
+[2026-01-18 13:53:13] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 13:53:13] [INFO] Loaded 1 operator configs
+[2026-01-18 13:53:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:53:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:53:13] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 13:54:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:54:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:54:14] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 13:55:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:55:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:55:14] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 13:56:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:56:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:56:14] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 13:57:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:57:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:57:15] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 13:58:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:58:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:58:15] [INFO] Iter 6: imported=35 skipped=965 markers=2
+[2026-01-18 13:59:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:59:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 13:59:15] [INFO] Iter 7: imported=35 skipped=965 markers=2
+[2026-01-18 14:00:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:00:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:00:16] [INFO] Iter 8: imported=35 skipped=965 markers=2
+[2026-01-18 14:01:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:01:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:01:16] [INFO] Iter 9: imported=35 skipped=965 markers=2
+[2026-01-18 14:02:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:02:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:02:16] [INFO] Iter 10: imported=35 skipped=965 markers=2
+[2026-01-18 14:03:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:03:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:03:17] [INFO] Iter 11: imported=35 skipped=965 markers=2
+[2026-01-18 14:04:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:04:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:04:17] [INFO] Iter 12: imported=35 skipped=965 markers=2
+[2026-01-18 14:05:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:05:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:05:17] [INFO] Iter 13: imported=35 skipped=965 markers=2
+[2026-01-18 14:06:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:06:17] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:06:17] [INFO] Iter 14: imported=35 skipped=965 markers=2
+[2026-01-18 14:07:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:07:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:07:18] [INFO] Iter 15: imported=35 skipped=965 markers=2
+[2026-01-18 14:08:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:08:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:08:18] [INFO] Iter 16: imported=35 skipped=965 markers=2
+[2026-01-18 14:09:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:09:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:09:18] [INFO] Iter 17: imported=35 skipped=965 markers=2
+[2026-01-18 14:10:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:10:18] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:10:18] [INFO] Iter 18: imported=35 skipped=965 markers=2
+[2026-01-18 14:10:41] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:10:41] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:10:41] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:10:41] [INFO] Loaded 1 operator configs
+[2026-01-18 14:10:41] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:10:41] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:10:41] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:10:49] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:10:49] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:10:49] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:10:49] [INFO] Loaded 1 operator configs
+[2026-01-18 14:10:49] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:10:49] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:10:49] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:11:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:11:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:11:50] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:12:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:12:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:12:50] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 14:13:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:13:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:13:50] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 14:14:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:14:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:14:51] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 14:15:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:15:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:15:51] [INFO] Iter 6: imported=35 skipped=965 markers=2
+[2026-01-18 14:16:00] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:16:01] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:16:01] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:16:01] [INFO] Loaded 1 operator configs
+[2026-01-18 14:16:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:16:01] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:16:01] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:17:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:17:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:17:02] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:18:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:18:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:18:02] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 14:19:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:19:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:19:02] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 14:20:03] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:20:03] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:20:03] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 14:20:25] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:20:25] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:20:25] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:20:25] [INFO] Loaded 1 operator configs
+[2026-01-18 14:20:26] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:20:26] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:20:26] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:21:26] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:21:26] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:21:26] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:22:26] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:22:26] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:22:26] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 14:23:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:23:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:23:27] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 14:24:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:24:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:24:27] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 14:25:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:25:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:25:27] [INFO] Iter 6: imported=35 skipped=965 markers=2
+[2026-01-18 14:26:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:26:27] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:26:27] [INFO] Iter 7: imported=35 skipped=965 markers=2
+[2026-01-18 14:27:28] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:27:28] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:27:28] [INFO] Iter 8: imported=35 skipped=965 markers=2
+[2026-01-18 14:28:28] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:28:28] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:28:28] [INFO] Iter 9: imported=35 skipped=965 markers=2
+[2026-01-18 14:29:28] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:29:28] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:29:28] [INFO] Iter 10: imported=35 skipped=965 markers=2
+[2026-01-18 14:30:29] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:30:29] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:30:29] [INFO] Iter 11: imported=35 skipped=965 markers=2
+[2026-01-18 14:31:29] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:31:29] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:31:29] [INFO] Iter 12: imported=35 skipped=965 markers=2
+[2026-01-18 14:32:29] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:32:29] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:32:29] [INFO] Iter 13: imported=35 skipped=965 markers=2
+[2026-01-18 14:33:30] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:33:30] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:33:30] [INFO] Iter 14: imported=35 skipped=965 markers=2
+[2026-01-18 14:34:12] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:34:12] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:34:12] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:34:12] [INFO] Loaded 1 operator configs
+[2026-01-18 14:34:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:34:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:34:13] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:35:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:35:13] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:35:13] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:35:50] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:35:50] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:35:50] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:35:50] [INFO] Loaded 1 operator configs
+[2026-01-18 14:35:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:35:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:35:50] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:35:53] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:35:53] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:35:53] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:35:53] [INFO] Loaded 1 operator configs
+[2026-01-18 14:35:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:35:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:35:54] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:36:01] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:36:01] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:36:01] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:36:01] [INFO] Loaded 1 operator configs
+[2026-01-18 14:36:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:36:02] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:36:02] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:36:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:36:50] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:36:50] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:36:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:36:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:36:54] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:37:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:37:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:37:51] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 14:37:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:37:54] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:37:54] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 14:38:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:38:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:38:51] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 14:38:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:38:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:38:55] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 14:39:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:39:51] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:39:51] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 14:39:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:39:55] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:39:55] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 14:39:58] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:39:58] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:39:58] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:39:58] [INFO] Loaded 1 operator configs
+[2026-01-18 14:39:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:39:59] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:39:59] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:40:13] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:40:13] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:40:13] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:40:13] [INFO] Loaded 1 operator configs
+[2026-01-18 14:40:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:40:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:40:14] [INFO] Iter 1: imported=35 skipped=965 markers=2
+[2026-01-18 14:41:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:41:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:41:14] [INFO] Iter 2: imported=35 skipped=965 markers=2
+[2026-01-18 14:42:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:42:14] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:42:14] [INFO] Iter 3: imported=35 skipped=965 markers=2
+[2026-01-18 14:42:16] [INFO] DAEMON AVVIATO
+[2026-01-18 14:42:16] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:42:16] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:42:16] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:42:16] [INFO] Connessione MySQL stabilita
+[2026-01-18 14:42:20] [INFO] DAEMON AVVIATO
+[2026-01-18 14:42:21] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:42:21] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:42:21] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:42:21] [INFO] Connessione MySQL stabilita
+[2026-01-18 14:43:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:43:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:43:15] [INFO] Iter 4: imported=35 skipped=965 markers=2
+[2026-01-18 14:44:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:44:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:44:15] [INFO] Iter 5: imported=35 skipped=965 markers=2
+[2026-01-18 14:45:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:45:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:45:15] [INFO] Iter 6: imported=35 skipped=965 markers=2
+[2026-01-18 14:45:19] [INFO] DAEMON AVVIATO
+[2026-01-18 14:45:19] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:45:19] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:45:19] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:45:19] [INFO] Connessione MySQL stabilita
+[2026-01-18 14:45:24] [INFO] DAEMON AVVIATO
+[2026-01-18 14:45:24] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:45:24] [INFO] Connessione DB2 stabilita
+[2026-01-18 14:45:24] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 14:45:24] [INFO] Connessione MySQL stabilita
+[2026-01-18 14:46:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:46:15] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:46:15] [INFO] Iter 7: imported=35 skipped=965 markers=2
+[2026-01-18 14:46:29] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:46:36] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:47:07] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:47:14] [INFO] === DAEMON STARTED ===
+[2026-01-18 14:47:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:47:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:47:16] [INFO] Iter 8: imported=35 skipped=965 markers=2
+[2026-01-18 14:48:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:48:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:48:16] [INFO] Iter 9: imported=35 skipped=965 markers=2
+[2026-01-18 14:49:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:49:16] [INFO] Marker AREA: Updated area=4 for operatore=518
+[2026-01-18 14:49:16] [INFO] Iter 10: imported=35 skipped=965 markers=2
