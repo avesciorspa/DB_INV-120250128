@@ -125,6 +125,7 @@ class StampaManager
     /**
      * Genera file TXT formattato
      * Nome file: operatore-reparto-numInv_YYYYMMDDHHMMSS.txt
+     * Default path: /var/www/DB_INV/stampe
      */
     public function generateTxtFile(
         array $rows,
@@ -132,7 +133,7 @@ class StampaManager
         int $reparto,
         int $numInv,
         int $idTipo,
-        string $basePath = '/tmp'
+        string $basePath = '/var/www/DB_INV/stampe'
     ): string
     {
         try {

@@ -41,7 +41,10 @@ class Config
             }
 
             self::$config[$key] = $value;
-            putenv("$key=$value");
+            // Scrivi variabili di sistema SOLO se non esistono già (non sovrascrivere)
+            if (empty(getenv($key))) {
+                @putenv("$key=$value");
+            }
         }
 
         self::$loaded = true;

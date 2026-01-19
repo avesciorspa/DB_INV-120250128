@@ -274,3 +274,15 @@
 [2026-01-18 23:37:36] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
 [2026-01-18 23:37:36] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
 [2026-01-18 23:37:36] [INFO] Iter 3: imported=35 skipped=9965 markers=2
+[2026-01-18 23:38:36] [INFO] === DAEMON STARTED ===
+[2026-01-18 23:38:36] [INFO] DB2 connection established via ODBC DSN: DB2
+[2026-01-18 23:38:36] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 23:38:36] [INFO] Connessione DB2 stabilita
+[2026-01-18 23:38:36] [INFO] Connessione MySQL stabilita {"host":"localhost","db":"DB_INV"}
+[2026-01-18 23:38:36] [INFO] Loaded 1 operator configs
+[2026-01-18 23:38:38] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:38:38] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:38:38] [INFO] Iter 1: imported=35 skipped=9965 markers=2
+[2026-01-18 23:39:40] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:39:40] [INFO] MARKER_DEBUG: raw=[AREA] len=4 trim=[AREA] len=4 is_AREA=Y is_STAMPA=N
+[2026-01-18 23:39:40] [INFO] Iter 2: imported=35 skipped=9965 markers=2
